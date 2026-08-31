@@ -36,7 +36,17 @@
 // |  +-------------------------------------------------------+  |
 // +-------------------------------------------------------------+
 
-  
+// 3. The Dual Relationship: "Is-A" and "Has-A" Together
+
+// The core structural mechanic of the Decorator Pattern relies on combining inheritance and composition simultaneously:
+
+// "Is-A" Relationship (Implements the Component Interface):
+// The decorator implements the exact same interface (or extends the same abstract class) as the object it decorates. Because the decorator is a component, the client code can interact with the wrapper identically to the core object through polymorphism without knowing a decorator is present.
+
+// "Has-A" Relationship (Holds a Component Reference):
+// The decorator contains an internal reference to another component object (has a component). This enables the decorator to receive a method call, forward the execution to the wrapped object, intercept the result, enhance or modify the output, and return it.
+
+// Because every decorator is also a valid component, decorators can wrap other decorators indefinitely to form a dynamic recursive chain.
   
 // Main entry point - Copy-paste and run directly
 public class Main {
